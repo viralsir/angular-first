@@ -1,0 +1,12 @@
+<p>tdf-component works!</p>
+<form #loginRef="ngForm" (ngSubmit)="checkUser(loginRef)">
+  UserName : <input type="text" name="username" ngModel minlength="2" required>
+  <br/><br/>
+  Password : <input type="password" name="password" ngModel required>
+  <br/><br/>
+  <input type="submit" value="login" [disabled]="loginRef.invalid">
+  <input type="reset" value="clear">
+</form>
+<hr/>
+  <h2>{{msg}}</h2>
+  <h3>{{loginRef.invalid}}</h3>
