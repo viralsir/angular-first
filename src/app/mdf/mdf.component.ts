@@ -8,6 +8,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class MdfComponent implements OnInit {
 
+
   loginRef=new FormGroup({
     user:new FormControl("",[Validators.required,Validators.minLength(2)]),
     password:new FormControl("",[Validators.required])

@@ -1,10 +1,10 @@
 <p>mdf works!</p>
 <form [formGroup]="loginRef" (ngSubmit)="checkUser()">
   UserName : <input type="text" size="20" formControlName="user">
-  <br/>
+  <br/><br/>
   Password : <input type="password" size="20" formControlName="password">
-  <br/>
-  <input type="submit" value="login" [disabled]="loginRef.invalid">
+  <br/><br/>
+  <input type="submit" value="login" [disabled]="loginRef.invalid"> &nbsp;&nbsp;
   <input type="reset" value="clear">
 
 </form>

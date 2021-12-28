@@ -11,10 +11,11 @@ import { TwoDatabindingComponent } from './two-databinding/two-databinding.compo
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { TdfComponentComponent } from './tdf-component/tdf-component.component';
 import { MdfComponent } from './mdf/mdf.component';
+import { StructureDirectiveComponent } from './structure-directive/structure-directive.component';
 
 @NgModule({
   declarations: [
-    AppComponent,Child1Component, Child2ComponentComponent, StringIntropolationComponent, PropertyBindingComponent, EventBindingComponent, TwoDatabindingComponent, TdfComponentComponent, MdfComponent
+    AppComponent,Child1Component, Child2ComponentComponent, StringIntropolationComponent, PropertyBindingComponent, EventBindingComponent, TwoDatabindingComponent, TdfComponentComponent, MdfComponent, StructureDirectiveComponent
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule
