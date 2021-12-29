@@ -1,0 +1,32 @@
+<p>structure-directive works!</p>
+<h1 *ngIf="true" > structure directive ngIf Content with true</h1>
+<h1 *ngIf="false" > structure directive ngIf Content with false</h1>
+
+<h1 *ngIf="f1" > structure directive ngIf Content with true</h1>
+<h1 *ngIf="f2" > structure directive ngIf Content with false</h1>
+
+<input type="button" [value]="msg" (click)="toggle()">
+
+<h1 *ngIf="flag" > structure directive ngIf Content with using toggle button </h1>
+<hr/>
+<ul>
+  <li *ngFor="let name of names">{{name}}</li>
+</ul>
+
+<form [formGroup]="EmployeeRef" (ngSubmit)="addEmployee()">
+
+  Name : <input type="text" formControlName="name"  size="20"> <br/>
+  Age : <input type="number" formControlName="age"> <br/>
+  Salary : <input type="number" formControlName="salary"> <br/>
+  <input type="submit" value="Add" [disabled]="EmployeeRef.invalid">
+  <input type="reset" value="clear">
+
+</form>
+
+  <table border="2">
+  <tr> <th>Name</th><th>Age</th><th>Salary</th></tr>
+  <tr *ngFor="let emp of employee"><td>{{emp.name}}</td><td>{{emp.age}}</td>
+     <td *ngIf="emp.salary>20000">{{emp.salary}}</td>
+  </tr>
+</table>
+
