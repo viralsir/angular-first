@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {Emp} from "../emp";
 
 @Component({
   selector: 'app-structure-directive',
@@ -21,15 +22,17 @@ export class StructureDirectiveComponent implements OnInit {
 
 
   names=['vimal','vishal','amit','rajan']
-  employee=[ {"name":"vimal","age":21,"salary":23000},
-             {"name":"viren","age":24,"salary":23000},
-            {"name":"amit","age":24,"salary":23000}
+  employee:Array<Emp>=[ new Emp("vimal",24,50000),
+             new Emp("viren",34,56000),
+             new Emp("vishal",45,56000)
           ]
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
   toggle(){
     if(this.flag==true)
@@ -45,7 +48,10 @@ export class StructureDirectiveComponent implements OnInit {
 
   addEmployee(){
         console.log(this.EmployeeRef.value);
-        this.employee.push(this.EmployeeRef.value);
+        //this.employee.push(this.EmployeeRef.value);
+        let empform=this.EmployeeRef.value
+
+        this.employee.push(new Emp(empform.name,empform.age,empform.salary))
         this.EmployeeRef.reset();
   }
 

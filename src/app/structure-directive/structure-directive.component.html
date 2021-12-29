@@ -7,7 +7,7 @@
 
 <input type="button" [value]="msg" (click)="toggle()">
 
-<h1 *ngIf="flag" > structure directive ngIf Content with using toggle button </h1>
+<h1 > structure directive ngIf Content with using toggle button </h1>
 <hr/>
 <ul>
   <li *ngFor="let name of names">{{name}}</li>
@@ -22,11 +22,16 @@
   <input type="reset" value="clear">
 
 </form>
+  <br/>
+<input type="button" [value]="msg" (click)="toggle()">
 
   <table border="2">
-  <tr> <th>Name</th><th>Age</th><th>Salary</th></tr>
-  <tr *ngFor="let emp of employee"><td>{{emp.name}}</td><td>{{emp.age}}</td>
-     <td *ngIf="emp.salary>20000">{{emp.salary}}</td>
+  <tr> <th>Name</th><th>Age</th><th *ngIf="flag">Salary</th><th *ngIf="flag">DA</th></tr>
+  <tr *ngFor="let emp of employee">
+    <td>{{emp.name}}</td>
+    <td>{{emp.age}}</td>
+    <td *ngIf="flag">{{emp.salary}}</td>
+    <td *ngIf="flag">{{emp.calculateDA()}}</td>
   </tr>
 </table>
 
