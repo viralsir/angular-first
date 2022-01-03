@@ -1,0 +1,7 @@
+<p>emp-entry works!</p>
+<form [formGroup]="empformRef" (ngSubmit)="empentrybtn()">
+  Name : <input type="text" formControlName="name"> <br/>
+  Salary : <input type="number" formControlName="salary"> <br/>
+  <input type="submit" value="add">
+  <input type="reset" value="clear">
+</form>

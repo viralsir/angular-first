@@ -12,10 +12,12 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { TdfComponentComponent } from './tdf-component/tdf-component.component';
 import { MdfComponent } from './mdf/mdf.component';
 import { StructureDirectiveComponent } from './structure-directive/structure-directive.component';
+import { EmpEntryComponent } from './emp-entry/emp-entry.component';
+import { EmpViewComponent } from './emp-view/emp-view.component';
 
 @NgModule({
   declarations: [
-    AppComponent,Child1Component, Child2ComponentComponent, StringIntropolationComponent, PropertyBindingComponent, EventBindingComponent, TwoDatabindingComponent, TdfComponentComponent, MdfComponent, StructureDirectiveComponent
+    AppComponent,Child1Component, Child2ComponentComponent, StringIntropolationComponent, PropertyBindingComponent, EventBindingComponent, TwoDatabindingComponent, TdfComponentComponent, MdfComponent, StructureDirectiveComponent, EmpEntryComponent, EmpViewComponent
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule

@@ -8,6 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent
 {
   user = 'Vivek' ;
+  entryComponent:boolean=true;
+  viewComponent:boolean=false;
 
+  entrybtn(){
+    this.entryComponent=true;
+    this.viewComponent=false;
+  }
+  viewbtn(){
+    this.entryComponent=false;
+    this.viewComponent=true;
+  }
 
 }

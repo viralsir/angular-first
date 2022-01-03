@@ -12,5 +12,9 @@
 -->
 <!--<app-tdf-component></app-tdf-component>-->
 <!--<app-mdf></app-mdf>-->
-<app-structure-directive></app-structure-directive>
+<!--<app-structure-directive></app-structure-directive>-->
+<input type="button" value="Entry" (click)="entrybtn()">
+<input type="button" value="View" (click)="viewbtn()">
 
+<app-emp-entry *ngIf="entryComponent" ></app-emp-entry>
+<app-emp-view *ngIf="viewComponent"></app-emp-view>
