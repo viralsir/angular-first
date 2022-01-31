@@ -1,0 +1,19 @@
+<p>fake-cmp works!</p>
+<br/>
+<input type="button"  value="load data" (click)="loadfakedata()">
+<br/>
+<table>
+  <tr>
+    <th>UserId</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Completed</th>
+  </tr>
+  <tr *ngFor="let fake of fakearray">
+    <td>{{fake.userId}}</td>
+    <td>{{fake.id}}</td>
+    <td>{{fake.title}}</td>
+    <td>{{fake.completed}}</td>
+
+  </tr>
+</table>

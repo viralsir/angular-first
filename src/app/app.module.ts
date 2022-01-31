@@ -14,13 +14,15 @@ import { MdfComponent } from './mdf/mdf.component';
 import { StructureDirectiveComponent } from './structure-directive/structure-directive.component';
 import { EmpEntryComponent } from './emp-entry/emp-entry.component';
 import { EmpViewComponent } from './emp-view/emp-view.component';
+import {HttpClientModule} from "@angular/common/http";
+import { FakeCmpComponent } from './fake-cmp/fake-cmp.component';
 
 @NgModule({
   declarations: [
-    AppComponent,Child1Component, Child2ComponentComponent, StringIntropolationComponent, PropertyBindingComponent, EventBindingComponent, TwoDatabindingComponent, TdfComponentComponent, MdfComponent, StructureDirectiveComponent, EmpEntryComponent, EmpViewComponent
+    AppComponent,Child1Component, Child2ComponentComponent, StringIntropolationComponent, PropertyBindingComponent, EventBindingComponent, TwoDatabindingComponent, TdfComponentComponent, MdfComponent, StructureDirectiveComponent, EmpEntryComponent, EmpViewComponent, FakeCmpComponent
   ],
   imports: [
-    BrowserModule,FormsModule,ReactiveFormsModule
+    BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
