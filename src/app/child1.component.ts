@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
 
 @Component({
   selector:'child1-componenet',
@@ -8,4 +8,15 @@ import {Component} from "@angular/core";
 export class Child1Component
 {
   title="child1 component";
+  age:number=10;
+
+  @Input()
+  user:string="";
+
+  @Input()
+  sname:Array<String>=[]
+
+
+
+
 }

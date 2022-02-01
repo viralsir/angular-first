@@ -19,4 +19,10 @@
 <app-emp-entry *ngIf="entryComponent" ></app-emp-entry>
 <app-emp-view *ngIf="viewComponent"></app-emp-view>-->
 
-<app-fake-cmp></app-fake-cmp>
+<!--<app-fake-cmp></app-fake-cmp>-->
+UserName : <input type="text" #userRef> <br/>
+<input type="button" value="add" (click)="getName(userRef)">
+UserName is {{user}} <br/>
+User Age is {{child1?.age}}
+
+<child1-componenet [user]="user"  [sname]="studentNames" ></child1-componenet>
